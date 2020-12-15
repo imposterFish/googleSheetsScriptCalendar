@@ -1,17 +1,18 @@
 function doCalendar(){
   year = 2021; // Change this for a different year
-  month=1; // Future change month
+  month=12; // Future change month
+  month=month-1; // Month starts at 0
   date=1;
-  daysInMonth=new Date(year, month, 0).getDate(); // Calculates the amount of days in a given month
+  daysInMonth=new Date(year, month-1, 0).getDate(); // Calculates the amount of days in a given month
   
   
   var d = new Date();
-  d.setFullYear(year, month-1, date)
+  d.setFullYear(year, month, date)
   
   var sheet= SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
   monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  sheet.getRange('A1').setValue(monthNames[month]);
   sheet.getRange('A1:G1').mergeAcross();
+  sheet.getRange('A1').setValue(monthNames[month]);
   
   sheet.getRange('A2').setValue('Sunday');
   sheet.getRange('B2').setValue('Monday');
@@ -21,6 +22,7 @@ function doCalendar(){
   sheet.getRange('F2').setValue('Friday');
   sheet.getRange('G2').setValue('Saturday');
   
+  // I would have done this part iteratively, but getRange required hard coded values. That or js did something really strange with strings.
   // First Calendar Row
   x=1;
   if (d.getDay()==0){
