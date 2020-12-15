@@ -2,7 +2,7 @@
 This script creates a simple monthly calendar in Google Sheets. Just input the year and month!
 
 ## How to Run
-To use this, paste the code into the script editor in Google Sheets. Currently, you have to edit the Month and Year in the doCalendar() function. Run doCalendar() from the script editor, after editing Month and Year.
+To use this, paste the code into the script editor in Google Sheets. Currently, you have to edit the Month and Year in the doCalendar() function. Run doCalendar() from the script editor, after editing Month and Year. You may have to change permissions to allow the script to run.
 
 ## Note
 This is a prototype, it works, but has not been tested. Many other features may be added soon. Feel free to suggest functionality. Contact me if you would like to add to my project.
