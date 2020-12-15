@@ -4,10 +4,10 @@ This script creates a simple monthly calendar in Google Sheets. Just input the y
 ![When formatted, it looks nice! -- Febuary 2021](https://raw.githubusercontent.com/imposterFish/googleSheetsScriptCalendar/main/images/formatted_Feb_2021.png)  
 
 ## File Description
-- Images
+- Images  
 Just contains images for this README  
 
-- calendarScript.gs
+- calendarScript.gs  
 The nifty script that makes the calendar
 
 ## How to Run
