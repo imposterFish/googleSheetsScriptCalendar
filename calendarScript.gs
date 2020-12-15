@@ -1,19 +1,22 @@
 function doCalendar(){
   year = 2021; // Change this for a different year
-  month=12; // Future change month
-  month=month-1; // Month starts at 0
-  date=1;
-  daysInMonth=new Date(year, month-1, 0).getDate(); // Calculates the amount of days in a given month
+  month=1; // Change this for a different Month. 1 is January, 2 is Febuary, ect.
   
+  date=1; 
+  daysInMonth=new Date(year, month, 0).getDate(); // Calculates the amount of days in a given month
+  month=month-1; // Month starts at 0
   
   var d = new Date();
   d.setFullYear(year, month, date)
   
   var sheet= SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
   monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  
+  // Formatting Title of Calendar
   sheet.getRange('A1:G1').mergeAcross();
   sheet.getRange('A1').setValue(monthNames[month]);
   
+  // Formats days of the Week
   sheet.getRange('A2').setValue('Sunday');
   sheet.getRange('B2').setValue('Monday');
   sheet.getRange('C2').setValue('Tuesday');
@@ -22,8 +25,9 @@ function doCalendar(){
   sheet.getRange('F2').setValue('Friday');
   sheet.getRange('G2').setValue('Saturday');
   
+  // Adds dates. There are 4 rows in between each week
   // I would have done this part iteratively, but getRange required hard coded values. That or js did something really strange with strings.
-  // First Calendar Row
+  // First Calendar Row - Cleans up sheet, starts calendar on correct day of the week
   x=1;
   if (d.getDay()==0){
     sheet.getRange('A3').setValue(x++);
@@ -95,7 +99,7 @@ function doCalendar(){
   sheet.getRange('F18').setValue(x++);
   sheet.getRange('G18').setValue(x++);
   
-  // Fifth Calendar Row
+  // Fifth Calendar Row - Adds dates, if there are more. Cleans up calendar too
   if (x>daysInMonth){
     sheet.getRange('A23').clearContent();
   }
