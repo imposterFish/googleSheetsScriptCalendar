@@ -1,6 +1,10 @@
 # Google Sheets Script Calendar
 This script creates a simple monthly calendar in Google Sheets. Just input the year and month!
 
+![When formatted, it looks nice! -- Febuary 2021](https://raw.githubusercontent.com/imposterFish/googleSheetsScriptCalendar/main/images/formatted_Feb_2021.png)  
+![Includes Leap Year Functionality -- Febuary 2020](https://raw.githubusercontent.com/imposterFish/googleSheetsScriptCalendar/main/images/Feb_2020.png)  
+![January 2021](https://raw.githubusercontent.com/imposterFish/googleSheetsScriptCalendar/main/images/Jan_2021.png)  
+
 ## How to Run
 To use this, paste the code into the script editor in Google Sheets. Currently, you have to edit the Month and Year in the doCalendar() function. Run doCalendar() from the script editor, after editing Month and Year. You may have to change permissions to allow the script to run.
 
