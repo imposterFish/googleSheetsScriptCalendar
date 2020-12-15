@@ -1,4 +1,4 @@
-# googleSheetsScriptCalendar
+# Google Sheets Script Calendar
 This script creates a simple monthly calendar in Google Sheets. Just input the year and month!
 
 ## How to Run
